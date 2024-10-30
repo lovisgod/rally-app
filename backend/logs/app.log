@@ -1,0 +1,292 @@
+{
+  error: Error: Function not implemented.
+      at morgan (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts:29:11)
+      at Object.<anonymous> (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts:14:9)
+      at Module._compile (node:internal/modules/cjs/loader:1376:14)
+      at Module._compile (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/source-map-support/source-map-support.js:568:25)
+      at Module.m._compile (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-5141202979762491.js:69:33)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+      at require.extensions..jsx.require.extensions..js (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-5141202979762491.js:114:20)
+      at require.extensions.<computed> (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-5141202979762491.js:71:20)
+      at Object.nodeDevHook [as .ts] (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1207:32),
+  level: 'error',
+  message: 'uncaughtException: Function not implemented.\n' +
+    'Error: Function not implemented.\n' +
+    '    at morgan (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts:29:11)\n' +
+    '    at Object.<anonymous> (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts:14:9)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1376:14)\n' +
+    '    at Module._compile (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/source-map-support/source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-5141202979762491.js:69:33)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)\n' +
+    '    at require.extensions..jsx.require.extensions..js (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-5141202979762491.js:114:20)\n' +
+    '    at require.extensions.<computed> (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-5141202979762491.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/ts-node-dev/lib/hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1207:32)',
+  stack: 'Error: Function not implemented.\n' +
+    '    at morgan (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts:29:11)\n' +
+    '    at Object.<anonymous> (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts:14:9)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1376:14)\n' +
+    '    at Module._compile (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/source-map-support/source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-5141202979762491.js:69:33)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)\n' +
+    '    at require.extensions..jsx.require.extensions..js (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-5141202979762491.js:114:20)\n' +
+    '    at require.extensions.<computed> (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-5141202979762491.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/ts-node-dev/lib/hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1207:32)',
+  exception: true,
+  date: 'Wed Oct 30 2024 11:55:00 GMT+0100 (GMT+01:00)',
+  process: {
+    pid: 53713,
+    uid: 502,
+    gid: 20,
+    cwd: '/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend',
+    execPath: '/Users/ayooluwa.olosunde/.nvm/versions/node/v20.10.0/bin/node',
+    version: 'v20.10.0',
+    argv: [
+      '/Users/ayooluwa.olosunde/.nvm/versions/node/v20.10.0/bin/node',
+      'src/app.ts'
+    ],
+    memoryUsage: {
+      rss: 63111168,
+      heapTotal: 19054592,
+      heapUsed: 13487024,
+      external: 2182331,
+      arrayBuffers: 16843
+    }
+  },
+  os: {
+    loadavg: [ 6.5380859375, 6.03173828125, 6.23193359375 ],
+    uptime: 616864
+  },
+  trace: [
+    {
+      column: 11,
+      file: '/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts',
+      function: 'morgan',
+      line: 29,
+      method: null,
+      native: false
+    },
+    {
+      column: 9,
+      file: '/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts',
+      function: null,
+      line: 14,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1376,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 25,
+      file: '/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/source-map-support/source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: '/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-5141202979762491.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1435,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: '/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-5141202979762491.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: '/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-5141202979762491.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: '/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/ts-node-dev/lib/hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1207,
+      method: 'load',
+      native: false
+    }
+  ],
+  label: 'Rillay',
+  timestamp: '2024-10-30T10:55:00.937Z'
+}
+{
+  error: Error: Function not implemented.
+      at morgan (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts:29:11)
+      at Object.<anonymous> (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts:14:9)
+      at Module._compile (node:internal/modules/cjs/loader:1376:14)
+      at Module._compile (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/source-map-support/source-map-support.js:568:25)
+      at Module.m._compile (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-8339048689701718.js:69:33)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+      at require.extensions..jsx.require.extensions..js (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-8339048689701718.js:114:20)
+      at require.extensions.<computed> (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-8339048689701718.js:71:20)
+      at Object.nodeDevHook [as .ts] (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1207:32),
+  level: 'error',
+  message: 'uncaughtException: Function not implemented.\n' +
+    'Error: Function not implemented.\n' +
+    '    at morgan (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts:29:11)\n' +
+    '    at Object.<anonymous> (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts:14:9)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1376:14)\n' +
+    '    at Module._compile (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/source-map-support/source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-8339048689701718.js:69:33)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)\n' +
+    '    at require.extensions..jsx.require.extensions..js (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-8339048689701718.js:114:20)\n' +
+    '    at require.extensions.<computed> (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-8339048689701718.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/ts-node-dev/lib/hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1207:32)',
+  stack: 'Error: Function not implemented.\n' +
+    '    at morgan (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts:29:11)\n' +
+    '    at Object.<anonymous> (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts:14:9)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1376:14)\n' +
+    '    at Module._compile (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/source-map-support/source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-8339048689701718.js:69:33)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)\n' +
+    '    at require.extensions..jsx.require.extensions..js (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-8339048689701718.js:114:20)\n' +
+    '    at require.extensions.<computed> (/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-8339048689701718.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/ts-node-dev/lib/hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1207:32)',
+  exception: true,
+  date: 'Wed Oct 30 2024 11:55:18 GMT+0100 (GMT+01:00)',
+  process: {
+    pid: 53777,
+    uid: 502,
+    gid: 20,
+    cwd: '/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend',
+    execPath: '/Users/ayooluwa.olosunde/.nvm/versions/node/v20.10.0/bin/node',
+    version: 'v20.10.0',
+    argv: [
+      '/Users/ayooluwa.olosunde/.nvm/versions/node/v20.10.0/bin/node',
+      'src/app.ts'
+    ],
+    memoryUsage: {
+      rss: 60358656,
+      heapTotal: 19054592,
+      heapUsed: 14137944,
+      external: 2182331,
+      arrayBuffers: 16843
+    }
+  },
+  os: {
+    loadavg: [ 7.052734375, 6.18798828125, 6.28515625 ],
+    uptime: 616882
+  },
+  trace: [
+    {
+      column: 11,
+      file: '/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts',
+      function: 'morgan',
+      line: 29,
+      method: null,
+      native: false
+    },
+    {
+      column: 9,
+      file: '/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/src/app.ts',
+      function: null,
+      line: 14,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1376,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 25,
+      file: '/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/source-map-support/source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: '/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-8339048689701718.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1435,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: '/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-8339048689701718.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: '/private/var/folders/r4/jp2pmf357gv7ct5b1p1w1yb80000gp/T/ts-node-dev-hook-8339048689701718.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: '/Users/ayooluwa.olosunde/Documents/projects/rillay-app/backend/node_modules/ts-node-dev/lib/hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1207,
+      method: 'load',
+      native: false
+    }
+  ],
+  label: 'Rillay',
+  timestamp: '2024-10-30T10:55:18.721Z'
+}
