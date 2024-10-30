@@ -153,7 +153,7 @@ class ApiRepo {
         return sendErrorResponse(res, 500, "Error, could not updating space") 
     } 
     // Your logic here
-    return sendSuccessResponse(res, 200, "Space updating successfully")
+    return sendSuccessResponse(res, 200, "Space updated successfully")
   }
 
   async adduserToSpace(req: Request, res: Response) {
@@ -219,7 +219,11 @@ class ApiRepo {
     const { spaceID } = req.query
     try {
          // Associate the user with existing spaces    
-     const spaceData = await new QueryHelper("space").findWithRelations({ spaceID }, {items: true, tasks: true}) // include items
+     const spaceData = await new QueryHelper("space").findWithRelations({ spaceID }, {
+        items: true,
+         tasksAsRequesting: true,
+         tasksAsTransferring: true
+        }) // include items
      if (!spaceData) return sendErrorResponse(res, 404, "Space not found")
      return  sendSuccessResponse(res, 200, {message: "Space fetched", spaceData})
     } catch (error) {
@@ -233,7 +237,11 @@ class ApiRepo {
     const { workspaceID } = req.query
     try {
          // Associate the user with existing spaces
-     const spaceData = await new QueryHelper("space").findWithRelationsMultiple({ workspaceID }, {items: true, tasks: true}) // include items
+     const spaceData = await new QueryHelper("space").findWithRelationsMultiple({ workspaceID }, {
+        items: true,
+        tasksAsRequesting: true,
+        tasksAsTransferring: true
+    }) // include items
      if (!spaceData) return sendErrorResponse(res, 404, "Space not found")
      return  sendSuccessResponse(res, 200, {message: "Spaces fetched", spaces: spaceData})
     } catch (error) {
@@ -258,6 +266,41 @@ class ApiRepo {
         console.log(error)
         return { status: false, message: "Error, could not create workspace"}
     } 
+  }
+
+  async createTask(req: Request, res: Response) {
+    const { itemID, name, requestingSpaceID, transferringSpaceID, quantity } = req.body
+    try {
+    const itemData = await new QueryHelper("item").singleFinder({ itemID })
+
+    if (!itemData) return sendErrorResponse(res, 404, "item not valid")
+    const newTask = await new QueryHelper("task").creator({itemID, name, requestingSpaceID, transferringSpaceID, quantity, status: "Pending"})
+    if (!newTask) return sendErrorResponse(res, 400, "Error, could not create task")
+         // Associate the user with existing spaces
+    } catch (error) {
+        console.log(error)
+        return sendErrorResponse(res, 500, "Error, could not create a task") 
+    } 
+    // Your logic here
+    return sendSuccessResponse(res, 200, "Task created successfully")
+  }
+
+  async editTask(req: Request, res: Response) {
+    const {itemID, name, requestingSpaceID, transferringSpaceID, quantity, status, taskID } = req.body
+    try {
+    const taskData = await new QueryHelper("task").singleFinder({ taskID })
+
+    if (!taskData) return sendErrorResponse(res, 404, "Task not found")
+    if (taskData.status == "Fulfilled") return sendErrorResponse(res, 409, "Task fulfilled already")
+    const editedTask = await new QueryHelper("task").singleUpdater({taskID}, {itemID, name, requestingSpaceID, transferringSpaceID, quantity, status})
+    if (!editedTask) return sendErrorResponse(res, 400, "Error, could not updating task")
+         // Associate the user with existing spaces
+    } catch (error) {
+        console.log(error)
+        return sendErrorResponse(res, 500, "Error, could not updating task") 
+    } 
+    // Your logic here
+    return sendSuccessResponse(res, 200, "Task updated successfully")
   }
 }
 

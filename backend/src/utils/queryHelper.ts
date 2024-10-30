@@ -27,7 +27,10 @@ class QueryHelper {
         break;
       case "userSpace":
         this.table = this.prisma.userSpace
-        break;    
+        break;  
+      case "task"  :
+        this.table = this.prisma.task
+        break;
       default:
         this.table = this.prisma.rUsers;
         break;

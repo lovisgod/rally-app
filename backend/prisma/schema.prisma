@@ -35,7 +35,8 @@ model Space {
   workspace Workspace? @relation(fields: [workspaceID], references: [workspaceID])
   userSpaces UserSpace[] // Many-to-many relationship with Users through UserSpace
   items     Items[]
-  tasks     Task[]     // Corrected opposite relation field
+  tasksAsRequesting    Task[] @relation("RequestingSpaceRelation")
+  tasksAsTransferring  Task[] @relation("TransferringSpaceRelation")
 }
 
 model RUsers {
@@ -75,16 +76,18 @@ model Items {
 }
 
 model Task {
-  taskID   String      @id @default(uuid())
-  itemID   String
-  spaceID  String      // Foreign key to Space
-  name     String      @db.VarChar(70)
-  quantity Int
-  status   TaskStatus
+  taskID             String      @id @default(uuid())
+  itemID             String
+  requestingSpaceID  String
+  transferringSpaceID String
+  name               String      @db.VarChar(70)
+  quantity           Int
+  status             TaskStatus
 
   // Relations
-  item     Items @relation(fields: [itemID], references: [itemID])
-  space    Space @relation(fields: [spaceID], references: [spaceID]) // Added relation to Space
+  item               Items @relation(fields: [itemID], references: [itemID])
+  requestingSpace    Space @relation("RequestingSpaceRelation", fields: [requestingSpaceID], references: [spaceID])
+  transferringSpace  Space @relation("TransferringSpaceRelation", fields: [transferringSpaceID], references: [spaceID])
 }
 
 enum Role {

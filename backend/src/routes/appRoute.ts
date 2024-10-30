@@ -59,6 +59,14 @@ router.put('/edit-item', (req: Request, res: Response) => {
     repo.editItem(req, res)
 });
 
+router.post('/create-task', (req: Request, res: Response) => {
+    repo.createTask(req, res)
+});
+
+router.put('/edit-task', (req: Request, res: Response) => {
+    repo.editTask(req, res)
+});
+
 
 
 export default router;
