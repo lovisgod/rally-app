@@ -3,10 +3,13 @@ import { PrismaClient } from '@prisma/client';
 import helmet  from 'helmet';
 import morgan from 'morgan';
 import wiston from './ErrorHelpers/WistonLogger.js';
+import { sendSuccessResponse } from './utils/sendResponses.js';
 
 
 const app: Express = express();
 const cors = require('cors');
+
+
 
 app.locals.prisma = new PrismaClient()
 
@@ -20,8 +23,12 @@ app.use(cors({
 app.use(helmet());
 
 app.get('/', (req: Request, res: Response) => {
-    res.send('Hello from the backend!');
+  sendSuccessResponse(res, 200, { 
+    id: 3,
+    name: "Rillay",
+    email: "sample@email.com"
   });
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
