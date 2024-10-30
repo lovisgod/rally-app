@@ -13,8 +13,92 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id    Int    @id @default(autoincrement())
-  email String @unique
-  name  String
+
+model Workspace {
+  workspaceID String  @id @default(uuid())
+  userID      String
+  name  String?
+  
+  // Relations
+  spaces  Space[] // Added opposite relation field
+}
+
+model Space {
+  spaceID     String   @id @default(uuid())
+  workspaceID String
+  name        String
+  requestFrom String?
+  transferTo  String?
+  userID      String   // Foreign key to Users
+
+  // Relations
+  workspace Workspace? @relation(fields: [workspaceID], references: [workspaceID])
+  userSpaces UserSpace[] // Many-to-many relationship with Users through UserSpace
+  items     Items[]
+  tasks     Task[]     // Corrected opposite relation field
+}
+
+model RUsers {
+  userID    String   @id @default(uuid())
+  name      String   @db.VarChar(70)
+  role      Role
+  email     String
+  password  String?
+  // Relations
+  userSpaces UserSpace[] // Many-to-many relationship with Space through UserSpace
+  workspaceID  String?
+}
+
+model UserSpace {
+  userID   String
+  spaceID  String
+
+  // Relations
+  user     RUsers @relation(fields: [userID], references: [userID])
+  space    Space @relation(fields: [spaceID], references: [spaceID])
+
+  @@id([userID, spaceID]) // Composite primary key
+}
+
+model Items {
+  itemID   String      @id @default(uuid())
+  spaceID  String
+  name     String      @db.VarChar(255)
+  quantity Int
+  uom      String      @db.VarChar(20)
+  status   ItemStatus
+  sharedWith String?
+  
+  // Relations
+  space Space @relation(fields: [spaceID], references: [spaceID])
+  tasks Task[]
+}
+
+model Task {
+  taskID   String      @id @default(uuid())
+  itemID   String
+  spaceID  String      // Foreign key to Space
+  name     String      @db.VarChar(70)
+  quantity Int
+  status   TaskStatus
+
+  // Relations
+  item     Items @relation(fields: [itemID], references: [itemID])
+  space    Space @relation(fields: [spaceID], references: [spaceID]) // Added relation to Space
+}
+
+enum Role {
+  Admin
+  User
+}
+
+enum ItemStatus {
+  Active
+  Archived
+}
+
+enum TaskStatus {
+  Pending
+  Processing
+  Fulfilled
 }

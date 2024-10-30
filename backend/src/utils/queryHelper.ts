@@ -13,13 +13,23 @@ class QueryHelper {
     this.tableString = _table;
 
     switch (this.tableString) {
-      case "Merchant":
-        case "User":
-          this.table = this.prisma.user;
+      case "Workspace":
+        this.table = this.prisma.workspace;
+        break;
+      case "User":
+         this.table = this.prisma.rUsers;
           break;
-
+      case "space":
+        this.table = this.prisma.space;
+        break;    
+      case "item":
+        this.table = this.prisma.items;
+        break;
+      case "userSpace":
+        this.table = this.prisma.userSpace
+        break;    
       default:
-        this.table = this.prisma.user;
+        this.table = this.prisma.rUsers;
         break;
     }
   }

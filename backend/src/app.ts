@@ -3,7 +3,8 @@ import { PrismaClient } from '@prisma/client';
 import helmet  from 'helmet';
 import morgan from 'morgan';
 import wiston from './ErrorHelpers/WistonLogger.js';
-import { sendSuccessResponse } from './utils/sendResponses.js';
+import { sendSuccessResponse } from './utils/sendResponses';
+import router from './routes/appRoute';
 
 
 const app: Express = express();
@@ -30,14 +31,7 @@ app.get('/', (req: Request, res: Response) => {
   });
 });
 
+app.use("/api", router)
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-// function helmet(): any {
-//     throw new Error('Function not implemented.');
-// }
-
-// function cookieParser(): any {
-//     throw new Error('Function not implemented.');
-// }
-
