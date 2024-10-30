@@ -10953,3 +10953,15 @@
   label: 'Rillay',
   timestamp: '2024-10-30T22:13:09.749Z'
 }
+{
+  message: '::1 - - [30/Oct/2024:22:31:13 +0000] "GET /api/get-a-workspace?userID=cd5a8910-de95-4a98-a4cf-0463915de597&workspaceID=0ce792b7-078d-405e-8fe9-2409d4e9ffb6 HTTP/1.1" 200 909 "http://localhost:3001/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36"\n',
+  level: 'info',
+  label: 'Rillay',
+  timestamp: '2024-10-30T22:31:13.541Z'
+}
+{
+  message: '::1 - - [30/Oct/2024:22:31:13 +0000] "GET /api/get-a-workspace?userID=cd5a8910-de95-4a98-a4cf-0463915de597&workspaceID=0ce792b7-078d-405e-8fe9-2409d4e9ffb6 HTTP/1.1" 304 - "http://localhost:3001/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36"\n',
+  level: 'info',
+  label: 'Rillay',
+  timestamp: '2024-10-30T22:31:13.550Z'
+}
