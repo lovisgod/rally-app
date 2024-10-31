@@ -181,6 +181,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
   button: {
     padding: "10px 15px",
+    marginTop: "10px",
     borderRadius: "5px",
     border: "1px solid #ffa500",
     backgroundColor: "#ffa500",
