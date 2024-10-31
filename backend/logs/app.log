@@ -11137,3 +11137,27 @@
   label: 'Rillay',
   timestamp: '2024-10-31T08:16:30.231Z'
 }
+{
+  message: '::1 - - [31/Oct/2024:08:55:11 +0000] "POST /api/login-a-user HTTP/1.1" 200 218 "http://localhost:3001/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36"\n',
+  level: 'info',
+  label: 'Rillay',
+  timestamp: '2024-10-31T08:55:11.020Z'
+}
+{
+  message: '::1 - - [31/Oct/2024:08:56:17 +0000] "POST /api/login-a-user HTTP/1.1" 200 218 "http://localhost:3001/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36"\n',
+  level: 'info',
+  label: 'Rillay',
+  timestamp: '2024-10-31T08:56:17.747Z'
+}
+{
+  message: '::1 - - [31/Oct/2024:08:57:36 +0000] "POST /api/login-a-user HTTP/1.1" 200 218 "http://localhost:3001/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"\n',
+  level: 'info',
+  label: 'Rillay',
+  timestamp: '2024-10-31T08:57:36.573Z'
+}
+{
+  message: '::1 - - [31/Oct/2024:09:02:49 +0000] "POST /api/login-a-user HTTP/1.1" 200 218 "http://localhost:3001/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"\n',
+  level: 'info',
+  label: 'Rillay',
+  timestamp: '2024-10-31T09:02:49.408Z'
+}

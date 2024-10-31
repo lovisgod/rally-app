@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { canPerformAction } from "./permissions";
 import { Transaction, TransactionType, Space } from "./types";
+import Kanban from "./Kanban";
 
 interface WorkspacePageProps {
   user: {
@@ -55,13 +56,14 @@ const WorkspacePage: React.FC<WorkspacePageProps> = ({ user }) => {
 
       <div style={styles.infoSection}>
         <h3>Spaces</h3>
-        {spaces.length > 0 ? (
+        {/* {spaces.length > 0 ? (
           spaces.map((space) => (
             <SpaceComponent key={space.id} space={space} userRole={user.role} />
           ))
         ) : (
           <p>No spaces created yet</p>
-        )}
+        )} */}
+        <Kanban />
       </div>
     </div>
   );
