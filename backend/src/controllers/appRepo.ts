@@ -42,6 +42,7 @@ class ApiRepo {
 
   async loginAUser(req: Request, res: Response) {
     const { email, password } = req.body
+    console.log(`${email} ${password}`)
     try {
          // Associate the user with existing spaces
      const userData = await new QueryHelper("User").singleFinder({ email, password }) // include items

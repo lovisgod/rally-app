@@ -1,0 +1,56 @@
+/* Kanban.css */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    background: #f7f7f7;
+  }
+  
+  #kanban {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .space {
+    width: 200px;
+    padding: 10px;
+    background: #e1e1e1;
+    border-radius: 8px;
+  }
+  
+  .space h2 {
+    text-align: center;
+  }
+  
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 150px;
+    margin-top: 10px;
+  }
+  
+  .item {
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .ingredients {
+    display: none;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+  .item.active .ingredients {
+    display: block;
+  }
+  
