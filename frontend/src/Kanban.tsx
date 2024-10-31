@@ -4,6 +4,10 @@ import "./kanban.css";
 
 declare const Sortable: any; // Declare Sortable globally
 
+const getRandomNumber = (min: number, max: number): number => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
 // Data for initial spaces and items
 const initialSpaces = [
   {
@@ -49,6 +53,7 @@ const Kanban: React.FC = () => {
             const updatedSpaces = [...spaces];
             const [movedItem] = updatedSpaces[index].items.splice(oldIndex, 1);
             updatedSpaces[index].items.splice(newIndex, 0, movedItem);
+            console.log("updated spaces is ::::::" + updatedSpaces);
             setSpaces(updatedSpaces);
           },
         });
@@ -57,7 +62,11 @@ const Kanban: React.FC = () => {
   }, [spaces]);
 
   const handleToggleIngredients = (itemId: string) => {
-    setActiveItemId((prev) => (prev === itemId ? null : itemId));
+    try {
+        setActiveItemId((prev) => (prev === itemId ? null : itemId));
+    } catch (error) {
+        console.log(error)
+    }
   };
 
   return (
@@ -68,7 +77,7 @@ const Kanban: React.FC = () => {
           <div className="items" ref={(el) => (spaceRefs.current[index] = el)}>
             {space.items.map((item) => (
               <div
-                key={item.id}
+                // key={item.id}
                 className={`item ${activeItemId === item.id ? "active" : ""}`}
                 onClick={() => handleToggleIngredients(item.id)}
               >
